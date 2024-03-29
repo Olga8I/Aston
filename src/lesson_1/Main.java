@@ -3,9 +3,9 @@ package lesson_1;
 public class Main {
     public static void main(String[] args) {
         Tasks.printThreeWords();//1
-        Tasks.checkSumSign(300, -303);//2
-        Tasks.printColor(111);//3
-        Tasks.compareNumbers(5, 10);//4
+        Tasks.checkSumSign();//2
+        Tasks.printColor();//3
+        Tasks.compareNumbers();//4
 
         System.out.println(Tasks.isSumInRange(22, 6));//5
         System.out.println(Tasks.isSumInRange(8, 2));

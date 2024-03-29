@@ -2,31 +2,34 @@ package lesson_1;
 
 public class Tasks {
     public static void printThreeWords() {
-        System.out.println("Orange");
-        System.out.println("Banana");
-        System.out.println("Apple");
+        System.out.println("Orange\nBanana\nApple");
     }
 
-    public static void checkSumSign(int a, int b) {
+    public static void checkSumSign() {
+        int a = 300;
+        int b = -303;
         int sum = a + b;
         if (sum >= 0) {
-            System.out.println("Сумма положительная");
+            System.out.println("РЎСѓРјРјР° РїРѕР»РѕР¶РёС‚РµР»СЊРЅР°СЏ");
         } else {
-            System.out.println("Сумма отрицательная");
+            System.out.println("РЎСѓРјРјР° РѕС‚СЂРёС†Р°С‚РµР»СЊРЅР°СЏ");
         }
     }
 
-    public static void printColor(int value) {
+    public static void printColor() {
+        int value = 111;
         if (value <= 0) {
-            System.out.println("Красный");
-        } else if (value > 0 && value <= 100) {
-            System.out.println("Жёлтый");
+            System.out.println("РљСЂР°СЃРЅС‹Р№");
+        } else if (value <= 100) {
+            System.out.println("Р–С‘Р»С‚С‹Р№");
         } else {
-            System.out.println("Зелёный");
+            System.out.println("Р—РµР»С‘РЅС‹Р№");
         }
     }
 
-    public static void compareNumbers(int a, int b) {
+    public static void compareNumbers() {
+        int a = 5;
+        int b = 10;
         if (a >= b) {
             System.out.println("a >= b");
         } else {
@@ -34,24 +37,19 @@ public class Tasks {
         }
     }
     public static boolean isSumInRange(int a, int b) {
-        int sum = a + b;
-        return sum >= 10 && sum <= 20;
+        return ((a + b) > 10 && (a + b) <= 20);
     }
 
     public static void checkNumber(int number) {
         if (number >= 0) {
-            System.out.println("Число " + number + " положительное");
+            System.out.println("Р§РёСЃР»Рѕ " + number + " РїРѕР»РѕР¶РёС‚РµР»СЊРЅРѕРµ");
         } else {
-            System.out.println("Число " + number + " отрицательное");
+            System.out.println("Р§РёСЃР»Рѕ " + number + " РѕС‚СЂРёС†Р°С‚РµР»СЊРЅРѕРµ");
         }
     }
 
     public static boolean isNegative(int number) {
-        if (number < 0) {
-            return true;
-        } else {
-            return false;
-        }
+        return number < 0;
     }
 
     public static void printString(String str, int n) {
