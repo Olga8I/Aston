@@ -18,34 +18,23 @@ public class Tasks {
 
     public static void printColor() {
         int value = 111;
-        if (value <= 0) {
-            System.out.println("Красный");
-        } else if (value <= 100) {
-            System.out.println("Жёлтый");
-        } else {
-            System.out.println("Зелёный");
-        }
+        String color = value < 0 ? "Красный" : (value < 100 ? "Желтый" : "Зеленый");
+        System.out.println(color);
     }
 
     public static void compareNumbers() {
         int a = 5;
         int b = 10;
-        if (a >= b) {
-            System.out.println("a >= b");
-        } else {
-            System.out.println("a < b");
-        }
+        String result = (a >= b) ? "a >= b" : "a < b";
+        System.out.println(result);
     }
     public static boolean isSumInRange(int a, int b) {
         return ((a + b) > 10 && (a + b) <= 20);
     }
 
     public static void checkNumber(int number) {
-        if (number >= 0) {
-            System.out.println("Число " + number + " положительное");
-        } else {
-            System.out.println("Число " + number + " отрицательное");
-        }
+        String message = (number >= 0) ? "положительное" : "отрицательное";
+        System.out.println("Число " + number + " " + message);
     }
 
     public static boolean isNegative(int number) {
