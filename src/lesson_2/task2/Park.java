@@ -11,11 +11,11 @@ public class Park {
     }
 
     public void displayAttractionInfo() {
-        System.out.println("Парк: " + name);
-        System.out.println("Информация об аттракционе:");
-        System.out.println("Название: " + attraction.getName());
-        System.out.println("Время работы: " + attraction.getWorkingHours());
-        System.out.println("Стоимость: " + attraction.getCost());
+        System.out.println("РџР°СЂРє: " + name);
+        System.out.println("РРЅС„РѕСЂРјР°С†РёСЏ РѕР± Р°С‚С‚СЂР°РєС†РёРѕРЅРµ:");
+        System.out.println("РќР°Р·РІР°РЅРёРµ: " + attraction.getName());
+        System.out.println("Р’СЂРµРјСЏ СЂР°Р±РѕС‚С‹: " + attraction.getWorkingHours());
+        System.out.println("РЎС‚РѕРёРјРѕСЃС‚СЊ: " + attraction.getCost());
     }
 
     private class Attraction {
@@ -43,7 +43,7 @@ public class Park {
     }
 
     public static void main(String[] args) {
-        Park park = new Park("Развлекательный парк", "Колесо обозрения", "с 10:00 до 22:00", 500.0);
+        Park park = new Park("Р Р°Р·РІР»РµРєР°С‚РµР»СЊРЅС‹Р№ РїР°СЂРє", "РљРѕР»РµСЃРѕ РѕР±РѕР·СЂРµРЅРёСЏ", "СЃ 10:00 РґРѕ 22:00", 500.0);
         park.displayAttractionInfo();
     }
 }
