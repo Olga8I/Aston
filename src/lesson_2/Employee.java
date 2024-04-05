@@ -1,4 +1,4 @@
-package lesson_2.task1;
+package lesson_2;
 
 public class Employee {
     private String fullName;
@@ -18,13 +18,12 @@ public class Employee {
     }
     
     public void printInfo() {
-        System.out.println("Информация о сотруднике:");
-        System.out.println("ФИО: " + fullName);
-        System.out.println("Должность: " + position);
-        System.out.println("Email: " + email);
-        System.out.println("Телефон: " + phoneNumber);
-        System.out.println("Зарплата: " + salary);
-        System.out.println("Возраст: " + age);
-        System.out.println();
+        System.out.println("Информация о сотруднике:" +"\n" +
+                "ФИО: " + fullName + "\n" +
+                "Должность: " + position + " \n" +
+                "Email: " + email + "\n" +
+                "Телефон: " + phoneNumber + "\n" +
+                "Зарплата: " + salary + "\n" +
+                "Возраст: " + age);
     }
 }

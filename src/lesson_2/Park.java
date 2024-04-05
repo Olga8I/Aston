@@ -1,4 +1,4 @@
-package lesson_2.task2;
+package lesson_2;
 
 public class Park {
 
@@ -11,14 +11,14 @@ public class Park {
     }
 
     public void displayAttractionInfo() {
-        System.out.println("Парк: " + name);
-        System.out.println("Информация об аттракционе:");
-        System.out.println("Название: " + attraction.getName());
-        System.out.println("Время работы: " + attraction.getWorkingHours());
-        System.out.println("Стоимость: " + attraction.getCost());
+        System.out.println("Парк: " + name + "\n" +
+                "Информация об аттракционе:" + "\n" +
+                "Название: " + attraction.getName() + "\n" +
+                "Время работы: " + attraction.getWorkingHours() + "\n" +
+                "Стоимость: " + attraction.getCost());
     }
 
-    private class Attraction {
+    public class Attraction {
         private String name;
         private String workingHours;
         private double cost;
@@ -40,10 +40,5 @@ public class Park {
         public double getCost() {
             return cost;
         }
-    }
-
-    public static void main(String[] args) {
-        Park park = new Park("Развлекательный парк", "Колесо обозрения", "с 10:00 до 22:00", 500.0);
-        park.displayAttractionInfo();
     }
 }
