@@ -9,6 +9,6 @@ public class Main {
 
     public static void main(String[] args) {
         int number = 5;
-        System.out.println("Factorial of " + number + " is: " + calculateFactorial(number));
+        System.out.println("Факториал числа " + number + " число: " + calculateFactorial(number));
     }
 }
