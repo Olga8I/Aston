@@ -11,10 +11,10 @@ public class MtsByTest {
 
         driver.get("https://www.mts.by/");
 
-        WebElement blockTitle = driver.findElement(By.xpath("//div[contains(text(), 'Онлайн пополнение без комиссии')]"));
+        WebElement blockTitle = driver.findElement(By.xpath("//div[@class='pay', 'Онлайн пополнение без комиссии')]"));
         assert blockTitle.isDisplayed() : "Название блока не отображается";
 
-        WebElement paymentLogos = driver.findElement(By.xpath("//div[@class='payment-logos']"));
+        WebElement paymentLogos = driver.findElement(By.xpath("//div[@class='pay__partners']"));
         assert paymentLogos.findElements(By.tagName("img")).size() > 0 : "Логотипы платежных систем не найдены";
 
         WebElement learnMoreLink = driver.findElement(By.linkText("Подробнее о сервисе"));
