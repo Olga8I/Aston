@@ -1,18 +1,31 @@
+import io.qameta.allure.Epic;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Owner;
 import io.qameta.allure.junit5.AllureJunit5;
-import org.junit.*;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+import org.junit.Assert;
 import java.util.List;
 
+
+
+@Epic("MTS Tests")
+@Feature("MTS Website Tests")
+@Owner("My")
 @ExtendWith(AllureJunit5.class)
 public class MtsByTest {
     private static WebDriver driver;
 
-    @BeforeClass
+    @BeforeAll
     public static void setup() {
         System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver");
         driver = new ChromeDriver();
@@ -23,6 +36,7 @@ public class MtsByTest {
         driver.get("https://www.mts.by/");
     }
 
+    @DisplayName("Verify services on MTS.by homepage")
     @Test
     public void testServices() {
         String[] services = {"Услуги связи", "Домашний интернет", "Рассрочка", "Задолженность"};
@@ -65,11 +79,8 @@ public class MtsByTest {
         driver.close();
     }
 
-    @AfterClass
+    @AfterAll
     public static void tearDown() {
         driver.quit();
     }
 }
-
-
-
